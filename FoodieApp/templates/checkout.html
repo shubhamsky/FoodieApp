@@ -1,0 +1,30 @@
+{% extends 'base.html'%} 
+{% block title %} Order Page {% endblock %} 
+
+{% block userName %} 
+    {% if session['name'] %}
+    <span>{{ session['name'] }}</span> 
+    {% else %}
+    <span>Guest</span> 
+    {% endif %} 
+{% endblock %} 
+
+{% block navList %}
+    <!-- NavMenu -->
+    <li class='search_nav_btn '><a href='/home'>Search Location</a></li>
+    <li><a href='/myorder'>Orders</a> </li>
+	<li><a href='/profile'>Profile</a> </li>
+	<li><a href='/sign-out'>Logout<span> </span><strong>></strong></a> </li>
+{% endblock %}
+
+{% block body %}
+<div class='container jumbotron'>
+  <h4>Cart check out page </h4>
+</div>
+<div class='container jumbotron'>
+  <ul>
+	  <li> Your cart is empty..!</li>
+  </ul>
+</div>
+
+{% endblock %}

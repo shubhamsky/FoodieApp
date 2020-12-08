@@ -1,0 +1,146 @@
+CREATE TABLE SignUp (
+    Cust_Id int NOT NULL AUTO_INCREMENT,
+    MobileNo bigint NOT NULL,
+    EmailId varchar(30)NOT NULL UNIQUE,
+    Passwrd varchar(20)NOT Null UNIQUE,
+    PRIMARY KEY (Cust_Id)
+);
+
+CREATE TABLE LogIn (
+    Cust_lgid int AUTO_INCREMENT,
+    Cust_No int,
+    Is_login char NOT NULL,
+    Custlogintime time,
+    Custloginloc varchar(30),
+    Custlogindate date,
+    PRIMARY KEY (Cust_lgid),
+    FOREIGN KEY (Cust_No) REFERENCES signup(Cust_Id)
+);
+
+CREATE TABLE Profile(
+    Cust_Prid int AUTO_INCREMENT,
+    Cust_No int,
+    CustName varchar(20) ,
+    OldPass varchar(20),
+    Address1 varchar(100),
+    City1 varchar(20),
+    State1 varchar(20),
+    Pincode1 int,
+    Address2 varchar(100),
+    City2 varchar(20),
+    State2 varchar(20),
+    Pincode2 int
+    Address3 varchar(100),
+    City3 varchar(20),
+    State3 varchar(20),
+    Pincode3 int
+    Address4 varchar(100),
+    City4 varchar(20),
+    State4 varchar(20),
+    Pincode4 int
+    Address5 varchar(100),
+    City5 varchar(20),
+    State5 varchar(20),
+    Pincode5 int
+    Primary key(Cust_Prid),
+    FOREIGN KEY (Cust_No) REFERENCES signup(Cust_Id)
+);
+
+CREATE TABLE Order (
+    Cust_Orid int AUTO_INCREMENT,
+    Cust_No int,
+    Orderdt datetime,
+    Rst_No
+    Food_No
+    PRIMARY KEY (Cust_lgid),
+    FOREIGN KEY (Cust_No) REFERENCES signup(Cust_Id)
+);
+
+CREATE TABLE RSignUp (
+    Rst_Id int AUTO_INCREMENT,
+    Rst_Mobile bigint NOT NULL, 
+    Rst_EmailId varchar(30)NOT NULL UNIQUE,
+    Rst_Passwrd varchar(20)NOT Null UNIQUE,
+    PRIMARY KEY (Rst_Id)
+);
+
+CREATE TABLE RLogIn (
+    Cust_lgid int AUTO_INCREMENT,
+    Rst_No int,
+    Is_login char NOT NULL,
+    Rlogintime time,
+    Rloginloc varchar(30),
+    Rlogindate date,
+    PRIMARY KEY (Cust_lgid),
+    FOREIGN KEY (Rst_No) REFERENCES rsignup(Rst_Id)
+);
+
+CREATE TABLE RProfile (
+    R_Pid int AUTO_INCREMENT,
+    Rst_No int,
+    RstName varchar(20),
+    RstAddress time,
+    RstCity varchar(30),
+    RstState date,
+    RstPincode int,
+    Gstno varchar(30),
+    ContPrsn varchar(30),
+    Cont_No int,
+    PRIMARY KEY (R_Pid),
+    FOREIGN KEY (Rst_No) REFERENCES rsignup(Rst_Id)
+);
+
+CREATE TABLE MenuItem (
+    R_Foodid int AUTO_INCREMENT,
+    Category int not null,
+    ItemName varchar(30),
+    Mrp int,
+    PRIMARY KEY (R_Foodid)
+);
+
+CREATE TABLE Menu (
+    R_Mnid int AUTO_INCREMENT,
+    Rst_No int,
+    Food_no int,
+    PRIMARY KEY (R_Mnid),
+    FOREIGN KEY (Food_no) REFERENCES menuitem(R_Foodid)
+);
+
+CREATE TABLE CustOrder(
+    Cust_Ordid int AUTO_INCREMENT,
+    Cust_No int,
+    Orderdt datetime,
+    Rst_No int,
+    R_MnNo int,
+    PRIMARY KEY (Cust_Ordid),
+    FOREIGN KEY (Cust_No) REFERENCES signup(Cust_Id),
+    FOREIGN KEY (R_MnNo) REFERENCES menu(R_Mnid)
+    FOREIGN KEY (Rst_No) REFERENCES rsignup(Rst_id)
+);
+
+CREATE TABLE Orderdetails(
+    Ordetails_id int AUTO_INCREMENT,
+    R_MnNo int,
+    R_FoodNo int,
+    Qty int,
+    PRIMARY KEY (Ordetails_id),
+    FOREIGN KEY (R_MnNo) REFERENCES menu(R_mnId),
+    FOREIGN KEY (R_FoodNo) REFERENCES menuitem(R_FoodId)  
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

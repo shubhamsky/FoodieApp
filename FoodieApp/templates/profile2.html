@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Foodie Corner-Customer Home</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="{{url_for('static' ,filename ='images/icons/favicon.ico')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<!---->
+	
+	<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<style>
+		
+	</style>
+</head>
+<body style="background-color: #ee4444;">
+	<div class="limiter">
+		<div class="container-login100" style="background-color: #ee4444;">
+			<div class="login100-moree" >
+				<img src="{{url_for('static' ,filename='images/icons/mainlogo.png')}}" width=150 height=150>
+				</img>
+				<a href="/home" class="userName">{{data}}<Label></Label></a>&nbsp;&nbsp;
+				<a href="/home" class="button">Home <Label></Label></a>&nbsp;&nbsp;
+				<a href="/searchlocation" class="button1">Location <Label></Label></a>&nbsp;&nbsp;
+				<a href="/myorder" class="button1">My Orders <Label></Label></a>&nbsp;&nbsp;
+				<a href="/profile" class="button1">Profile <Label></Label></a>&nbsp;&nbsp;
+				<a href="#" class="button1">Cart <Label></Label></a>
+				<a href="#" class="button4">Logout <Label></Label><img class="bt" src="{{url_for('static' ,filename='images/icons/logout.jpg')}}" width=20 height=17></img></a>
+			</div>
+			<div class="container test">
+		    <h3> YOUR PROFILE </h3>
+		    <br>
+		    <div class='cards'>
+
+		    </div>
+	</div>
+	
+
+
+</body>
+</html>

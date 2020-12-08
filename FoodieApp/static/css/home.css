@@ -1,0 +1,138 @@
+/*Homecss*/
+.userName{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 9px;
+  padding: 3px 8px;
+}
+.userName:hover{
+text-decoration: none !important;
+color: white !important;
+}
+
+.card_title {
+font-size: 20px;
+font-weight: bold;
+margin: 6px;
+word-wrap:break-word;
+
+}
+
+a.hotel_menu {
+text-decoration: none !important;
+color: red;
+border: 1px solid red;
+border-radius: 6px;
+text-align: center;
+margin-top: 17px;
+padding: 2px 1px;
+width: 50%;
+cursor: pointer;
+margin: 13px 77px;
+}
+
+a.hotel_menu:hover{
+box-shadow:0 2px 0px 2px rgba(0,0,0,0.2);
+background-color: white;
+scale: 0.5;
+border: 1px solid red;
+transition:0.5s;
+color:red !important;
+font-weight:bold !important;
+}
+
+.card_body {
+text-align: center;
+}
+.card_body span{
+text-align:left;
+word-wrap:break-word;
+}
+.card:hover{
+ box-shadow:0 2px 0px 2px rgba(0,0,0,0.2) !important;
+ background-color: white;
+ scale:0.1;
+ transition:0.5s;
+ transform: scale(1.05);
+}
+
+img.hotel_img {
+max-width:100%;
+height: 208px;
+}
+
+.card{
+display: inline-flex !important;
+-ms-flex-direction: column;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 1px solid rgba(0,0,0,.125);
+border-radius: .25rem;
+margin: 13px 10px;
+width: 30%;
+text-align: center;
+font-family: arial;
+transition: transform .5s cubic-bezier(.215,.61,.355,1);
+}
+
+.search_location_div.jumbotron>div {
+  text-align:center;
+  display:flex;
+}
+
+h4.homePageHeader{
+display:block;
+color:black;
+margin-left:10px;
+background-color:whitesmoke;
+}
+
+.search_location_div.jumbotron>div input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+width: 46%;
+background: #f1f1f1;
+outline: none;
+display: inline-flex;
+margin-left: 14%;
+}
+
+/* Style the submit button */
+.search_location_div.jumbotron>div button {
+width: 20%;
+padding: 10px;
+background: #f85907de;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none; /* Prevent double borders */
+cursor: pointer;
+display:inline-block;
+outline:none;
+margin:0 !important;
+}
+
+.search_location_div.jumbotron>div button:hover {
+background: #f6250bf0;
+}
+
+/* Clear floats */
+.search_location_div.jumbotron>div::after {
+content: "";
+clear: both;
+display: table;
+}
+
+h3.homePageHeader {
+  padding:1px 5px;
+  margin-left:10px;
+  color:#F44336;
+  border:1px solid #ddd;
+}

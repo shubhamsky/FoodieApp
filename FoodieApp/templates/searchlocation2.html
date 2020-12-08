@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Foodie Corner-Search Location</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="{{url_for('static' ,filename ='images/icons/favicon.ico')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<!---->
+	
+	<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/homePage.js') }}"></script>
+</head>
+<body style="background-color: #ee4444;">
+	<div class="limiter">
+		<div class="container-login100" style="background-color: #ee4444;">
+			<div class="login100-moree" >
+
+				<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50 search_hotel_menu">
+					<a href="home.html">
+						<img src="{{url_for('static' ,filename='images/icons/close-icon.jpg')}}" width=20 height=20></img>
+					</a>	
+					<!-- <form class="login100-form validate-form"> -->
+						<span class="login100-form-title p-b-59">
+							Location
+						</span>
+
+						<div class="wrap-input100">
+						
+							<input class="input100 manualLocation" type="text" name="mobileemail" placeholder="Area / City...">
+							<span class="focus-input100"></span>
+						</div>
+
+						<div class="wrap-input100 " >
+						
+							<input class="input100 autoLocation" type="text" name="mobileemail" placeholder="Current Location Using GPS Id...">
+							<span class="focus-input100"></span>
+						</div>
+
+						<div class="container">
+							<div class="">
+								<div class=""></div>
+									<button class="btn btn-danger search_hotel" a href="home.html" >
+									Search
+									</button>
+								</div>
+						</div>
+						<!-- <div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+									<button class="login100-form-btn search_hotel">
+									Search
+									</button>
+								</div>
+						</div> -->
+						</div>
+					<!-- </form> -->
+				</div>
+				
+				<div class="login100-moree" >
+				<a href="myorder.html" class="button1">My Orders <Label></Label></a>&nbsp;&nbsp;
+				<a href="profile.html" class="button1">Profile <Label></Label></a>&nbsp;&nbsp;
+				<a href="#" class="button1">Cart <Label></Label></a>
+				<a href="#" class="button4">Logout <Label></Label><img class="bt" src="{{url_for('static' ,filename='images/icons/logout.jpg')}}" width=20 height=17></img></a>
+			</div>
+			</div>
+		</div>
+		<div class="container test">
+		    <h3> Hotels </h3>
+		    <br>
+		    <div class='cards'>
+
+		    </div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>

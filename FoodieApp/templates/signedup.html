@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Foodie Corner-Sign Up</title>
+	<link rel="icon" type="image/png" href="{{url_for('static' ,filename ='images/icons/favicon.ico')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static' ,filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<!---->
+	
+	<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body style="background-color: #ee4444;">
+		<div class="limiter">
+			<div class="container-login100" style="background-color: #ee4444;">
+				<div class="login100-more">
+					<img src="{{url_for('static' ,filename='images/icons/mainlogo.png')}}" width=150 height=150>
+					</img>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+					&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+					&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+					&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   
+					<a href="/login" class="button1" >Log In</a>
+					<a href="/signup" class="button" >Sign Up</a><br><br>
+					<h5>&nbsp;&nbsp; Order from your Favourite restaurants near you.</h5><br>
+					<h5>&nbsp;&nbsp; Order now & avail 10% discount.</h5><br><br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" id="location" name="location" value="Enter your Pin Code...">
+					<a href="javaScript:void(0);" class="button2" onclick="findLoactionClick();" >Find</a><br>
+					&nbsp;&nbsp; &nbsp; 
+					POPULAR CITIES IN INDIA <br><br>
+					&nbsp;&nbsp; &nbsp; 
+					<a href class="normallink">Ahmedabad</a> 
+					<a href class="normallink">Bangalore</a> 
+					<a href class="normallink">Chennai</a> 
+					<a href class="normallink">Delhi </a>
+					<a href class="normallink">Gurgaon </a>
+					<a href class="normallink">Hyderabad </a>
+					<a href class="normallink">Kolkata</a><br>
+					&nbsp;&nbsp; &nbsp; 
+					<a href class="normallink">Mumbai </a>
+					<a href class="normallink">Pune & more..</a>
+				</div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<a href="{{url_for('static' ,filename='../index.html')}}"><img src="{{url_for('static' ,filename='images/icons/close-icon.jpg')}}" width=20 height=20></img>
+				</a>
+				<form class="login100-form validate-form" method="POST" action="" enctype="multipart/form-data">
+					<span class="login100-form-title p-b-59">
+						Sign Up <LABEL>{{success}}</LABEL>
+					</span>
+
+
+
+
+						
+						<a href="/login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							Continue to Log In
+							<i class="fa fa-long-arrow-right m-l-578"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>					
+</html>

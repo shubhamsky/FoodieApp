@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/store.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/homePage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/home.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/hotel.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico')}}" type="image/x-icon">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+
+<body class="bg-color">
+    <nav class="nav nav-header">
+        <h3 class='foodie_logo'>Foodie !</h3>
+        <div class='nav_userName'>
+            {% block userName %}
+            <!-- logged in user name -->
+            {% endblock %}
+        </div>
+        <ul>
+            {% block navList %} 
+            
+            {% endblock %}
+        </ul>
+    </nav>
+    {% block head %}
+    <!-- head Title -->
+    {% endblock %} {% block body%}
+    <!-- Content Body -->
+    {% endblock%}
+
+    <!-- Optional JavaScript -->
+    <div id='overlay'></div>
+    <div id='loader'></div>
+</body>
+
+</html>

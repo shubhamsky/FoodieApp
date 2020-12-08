@@ -1,0 +1,124 @@
+{% extends 'base.html'%}
+
+{% block title %}
+ Hotel Page
+{% endblock %}
+
+{% block userName %} 
+    {% if session['name'] %}
+    <span>{{ session['name'] }}</span> 
+    {% else %}
+    <span>Guest</span> 
+    {% endif %} 
+{% endblock %} 
+
+{% block navList %}
+	<!-- NavMenu -->
+	<li class='search_nav_btn'><a href='/home'>Search Location</a></li>
+	{% if session['name'] %}
+	   
+        <li><a href='/profile'>Profile</a> </li>
+        <li><a href='/myorder'>Orders</a> </li>
+        <li><a class='cart_navBtn' data-value="0" href='/cart'>Cart</a> </li>
+		<li><a href='/sign-out'>Logout<span> </span><strong>></strong></a> </li>
+		
+	{% else %}
+	    <li><a class='cart_navBtn' data-value="0" href='/cart'>Cart</a></li>
+        <li><a href='/login'>Login</a> </li>
+		<li><a href='/signup'>Signup</a> </li>		
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+    <!-- Hotel Header -->
+	<div class='hotel_header'>
+	<img class="hotel_hd_img" width="254" height="165" alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qsajnrgthwvfz2ltbed1">
+		<span class='hotel_name' data-meneuid='{{hotelViewModel.menuId[0][0]}}' > {{ hotelViewModel.hotelDetails[0][0] }} </span>
+		<span class="location"> {{ hotelViewModel.hotelDetails[0][1] }}</span>
+		<span class="detail">PURE Veg only rs 499 for 1.</span>
+		
+	</div>
+{% endblock %} 
+{% block body %} 
+
+	<div class="container">
+		<div class="hotel_menu_container row">
+			<ul class="hotel_menu_main_items col-sm-2 col-lg-2 col-md-2">
+				{% for item in hotelViewModel.menuCategory %}
+				
+				{% if loop.index == 1 %}
+						<li class="active"><a class="" data-toggle="tab" href="#{{item[0] | replace(' ','')}}">{{item[0]}}</a></li>
+					{% else %}
+						<li><a class="" data-toggle="tab" href="#{{item[0] | replace(' ','')}}">{{item[0]}}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+			<div class="tab-content col-sm-5 col-lg-5 col-md-5">
+			<!-- menu sub items -->
+			{% for category in hotelViewModel.menuCategory  %}
+					{% if loop.index == 1 %}
+						<div class="tab-pane fade in active" id="{{category[0] | replace(' ','')}}">
+					{% else %}
+						<div class="tab-pane fade" id="{{category[0] | replace(' ','')}}">
+					{% endif %}
+					<h3>{{ category[0] }} </h3>
+					{% for menuItem in hotelViewModel.menuItems %}				 
+						{% if category[0] == menuItem[2] %}
+						<div class="menu_subitem_div row " data-id="{{ menuItem[0] }}">
+						<div class=" col-lg-8 menu_subitem_header">
+								<h4> {{ menuItem[4] }}</h4>
+								<!-- <p> {{ menuItem[3] }} </p> -->
+								<div class='cart_item_price'>Rs {{ menuItem[5] }}.00 </div>
+							</div>
+							<div class="col-lg-4 menu_subitem_img">
+								<img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yjooc5aqy13pfkjwkwlv">
+							</div>
+							<div class="btn btn-sm  btn-success btn_add_toCart"> Add </div>
+							</div>	
+							<hr>	
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endfor %}
+			</div>
+			<div class="cart_div col-sm-4 col-lg-4 col-md-4">
+				<h1 class="text text-danger"> Cart </h1>
+				<div class="cart_container">
+					<span class="cart_content hidden"> EMPTY !</span>
+					<div class="cart_header">
+						<p>
+							<strong><span class="cart_count">0</span> ITEMS </strong>
+						</p> 
+					</div>
+					<!-- cart items -->
+					<div class='cart_items'>
+						
+					</div>
+					<!-- End of cart items -->
+					<!-- cart total -->
+					<div class='cart_total_cntr row'>
+						<div class='col-lg-4'>
+							<span> <strong>Subtotal</strong> </span>
+						</div>
+						<div class='col-lg-4 col-lg-push-4'>
+							<strong>
+								<span class='cart_total_val'> Rs 0.00 </span>
+							</strong>
+						</div>		
+					</div>
+					<hr>
+					<!-- End of cart total -->
+					<!-- cart checkout -->
+					<div>
+						<button class='btn btn-success cart_checkout disabled'>Checkout</button>
+					</div>
+					<!-- end of cart checkout -->
+				</div>
+			</div>
+		</div>
+	</div>
+		    
+{%  endblock %}
+
+ 
+
